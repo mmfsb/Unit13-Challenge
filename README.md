@@ -2,7 +2,7 @@
 
 # Robo Advisor for Retirement Plans
 
-![roboadvisor](Images/robo_advisor_pic.png)
+![roboadvisor](Images/robo_advisor_pic.jpeg)
 
 ### Background
 
@@ -34,4 +34,4 @@ You are asked to accomplish the following main tasks:
 
 ## Robo Advisor in action from the test window
 
-![Robo Advisor in action](Images/RoboAdvisor.gif)
+![Robo Advisor in action](Images/RoboAdvisor1.gif)
