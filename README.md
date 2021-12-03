@@ -18,6 +18,7 @@ You are asked to accomplish the following main tasks:
 
 3. **[Enhance the Robo Advisor with an Amazon Lambda Function:](#Enhance-the-Robo-Advisor-with-an-Amazon-Lambda-Function)** Create an Amazon Lambda function that validates the user's input and returns the investment portfolio recommendation. This task includes testing the Amazon Lambda function and making the integration with the bot.
 
+## Lambda Function
 ![lambda_function](Images/lambda_function.gif)
 
 ---
