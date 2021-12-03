@@ -21,6 +21,9 @@ You are asked to accomplish the following main tasks:
 ## Lambda Function
 ![lambda_function](Images/lambda_function.gif)
 
+## Test Cases
+![test cases](Images/testing.gif)
+
 ---
 ---
 
