@@ -54,11 +54,11 @@ def validate_data(age, investment_amount, intent_request):
     # Validate that the user's age is under 65 years old
     if age is not None:
         age = parse_int(age)
-        if age > 64:
+        if age > 65:
             return build_validation_result(
                 False,
                 "age",
-                "You should be under the age of 65 to use this service, "
+                "You need to be younger than 65 to use this service, "
                 "please provide a different age.",
             )
 
@@ -71,7 +71,7 @@ def validate_data(age, investment_amount, intent_request):
             return build_validation_result(
                 False,
                 "investmentAmount",
-                "The minimum investment amount is 5,000 USD to use this service, "
+                "The minimum investment amount required is $5,000 USD, "
                 "please provide a greater amount.",
             )
 
@@ -151,12 +151,20 @@ def recommend_portfolio(intent_request):
         # Use the elicitSlot dialog action to re-prompt
         # for the first violation detected.
         
+        # This code performs basic validation on the supplied input slots.
+
+        # Gets all the slots
         slots = get_slots(intent_request)
+        
+        # Validates user's input using the validate_data function
         validation_result = validate_data(age, investment_amount, intent_request)
         
+        # If the data provided by the user is not valid,
+        # the elicitSlot dialog action is used to re-prompt for the first violation detected.
         if not validation_result["isValid"]:
-            slots[validation_result["violatedSlot"]] = None
+            slots[validation_result["violatedSlot"]] = None # Cleans invalid slot
             
+            # Returns an elicitSlot dialog to request new data for the invalid slot
             return elicit_slot(
                 intent_request["sessionAttributes"],
                 intent_request["currentIntent"]["name"],
@@ -168,10 +176,10 @@ def recommend_portfolio(intent_request):
         # Fetch current session attibutes
         output_session_attributes = intent_request["sessionAttributes"]
 
+        # Once all slots are valid, a delegate dialog is returned to Lex to choose the next course of action.
         return delegate(output_session_attributes, get_slots(intent_request))
 
     # Get the initial investment recommendation
-
     initial_recommendation = risk(risk_level)
 
     # Return a message with the initial recommendation based on the risk level.
