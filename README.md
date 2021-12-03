@@ -22,15 +22,6 @@ You are asked to accomplish the following main tasks:
 ![lambda_function](Images/lambda_function.gif)
 
 ---
-
-### Files
-
-- [lambda_function.py](Starter_Files/lambda_function.py)
-- [correct_dialog.txt](Test_Cases/correct_dialog.txt)
-- [age_error.txt](Test_Cases/age_error.txt)
-- [incorrect_amount_error.txt](Test_Cases/incorrect_amount_error.txt)
-- [negative_age_error.txt](Test_Cases/negative_age_error.txt)
-
 ---
 
 ## Robo Advisor in action from the test window
