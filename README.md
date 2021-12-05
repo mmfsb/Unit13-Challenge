@@ -2,7 +2,7 @@
 
 # Robo Advisor for Retirement Plans
 
-![roboadvisor](Images/robo_advisor_pic.jpeg)
+![roboadvisor](Images/robotgif.gif)
 
 ### Background
 
